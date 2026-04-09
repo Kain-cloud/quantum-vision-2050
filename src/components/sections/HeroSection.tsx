@@ -1,11 +1,24 @@
 import ParticleField from "../ParticleField";
+import heroImage from "@/assets/hero-earth-2050.jpg";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Starfield background */}
+      {/* Background image */}
       <div className="absolute inset-0">
-        {Array.from({ length: 100 }).map((_, i) => (
+        <img
+          src={heroImage}
+          alt="Earth from space in 2050"
+          className="w-full h-full object-cover opacity-40"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
+      </div>
+
+      {/* Starfield */}
+      <div className="absolute inset-0">
+        {Array.from({ length: 80 }).map((_, i) => (
           <div
             key={i}
             className="absolute rounded-full animate-twinkle"
@@ -29,26 +42,21 @@ export default function HeroSection() {
           background: 'radial-gradient(circle, hsl(187 80% 55% / 0.15) 0%, hsl(263 70% 50% / 0.1) 40%, transparent 70%)',
         }}
       />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[60%] w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full border border-secondary/20"
-        style={{
-          background: 'radial-gradient(circle at 40% 30%, hsl(187 80% 40% / 0.4), hsl(220 60% 20% / 0.8) 60%, hsl(230 60% 8%) 100%)',
-        }}
-      />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="mb-6">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium border border-primary/30 bg-primary/10 text-primary-foreground/80 mb-6">
+          <span className="inline-block px-5 py-2 rounded-full text-sm font-medium border border-primary/30 bg-primary/10 text-primary-foreground/80 mb-6 neon-glow-sm">
             🚀 Një udhëtim në të ardhmen
           </span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 gradient-text leading-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold mb-6 gradient-text leading-tight tracking-tight">
           Mirë se vini në vitin 2050
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-4">
+        <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-2xl mx-auto mb-4 font-light">
           ku fizika kuantike dhe hapësira ndryshojnë jetën tonë
         </p>
-        <p className="text-sm text-muted-foreground/60 max-w-xl mx-auto">
+        <p className="text-sm text-muted-foreground/60 max-w-xl mx-auto leading-relaxed">
           Zbuloni se si teknologjia kuantike, inteligjenca artificiale dhe eksplorime hapësinore do të transformojnë botën tonë
         </p>
       </div>

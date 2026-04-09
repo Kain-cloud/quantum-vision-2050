@@ -136,6 +136,16 @@
   transform: translateY(0);
 }
 
+/* Neon glow utility */
+.neon-glow-sm {
+  box-shadow: 0 0 10px hsl(263 70% 50% / 0.2), 0 0 20px hsl(187 80% 55% / 0.1);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: hsl(230 60% 8%); }
