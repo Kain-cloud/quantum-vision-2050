@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import quantumComputerImg from "@/assets/quantum-computer.jpg";
+import futureHospitalImg from "@/assets/future-hospital.jpg";
 
 const innovations = [
   {
@@ -47,9 +49,9 @@ const innovations = [
 ];
 
 const colorMap: Record<string, string> = {
-  primary: "border-primary/30 hover:border-primary/60 hover:shadow-[0_0_30px_hsl(263,70%,50%,0.2)]",
-  secondary: "border-secondary/30 hover:border-secondary/60 hover:shadow-[0_0_30px_hsl(187,80%,55%,0.2)]",
-  accent: "border-accent/30 hover:border-accent/60 hover:shadow-[0_0_30px_hsl(45,96%,56%,0.2)]",
+  primary: "border-primary/30 hover:border-primary/60 hover:shadow-[0_0_30px_hsl(263,70%,50%,0.3)]",
+  secondary: "border-secondary/30 hover:border-secondary/60 hover:shadow-[0_0_30px_hsl(187,80%,55%,0.3)]",
+  accent: "border-accent/30 hover:border-accent/60 hover:shadow-[0_0_30px_hsl(45,96%,56%,0.3)]",
 };
 
 export default function InnovationsSection() {
@@ -57,39 +59,57 @@ export default function InnovationsSection() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <section className="relative py-20 md:py-32 px-4" id="innovations">
+    <section className="relative py-24 md:py-36 px-4" id="innovations">
       <div ref={ref} className={`max-w-6xl mx-auto ${visible ? 'section-visible' : 'section-hidden'}`}>
-        <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-secondary/10 border border-secondary/20 text-secondary mb-4">
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary mb-4 tracking-wider uppercase">
             Seksioni 2
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
             Inovacionet kryesore në vitin 2050
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Fizika kuantike dhe teknologjia po hapin dyer të reja. Ja cilat janë ndryshimet më të mëdha që na presin.
           </p>
+        </div>
+
+        {/* Feature images row */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="relative rounded-2xl overflow-hidden group">
+            <img src={quantumComputerImg} alt="Kompjuter kuantik" className="w-full h-56 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" width={1280} height={720} />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-5">
+              <span className="text-sm font-semibold text-foreground">💻 Kompjuterët kuantikë</span>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden group">
+            <img src={futureHospitalImg} alt="Spitali i së ardhmes" className="w-full h-56 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" width={1280} height={720} />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-5">
+              <span className="text-sm font-semibold text-foreground">🏥 Mjekësia e së ardhmes</span>
+            </div>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {innovations.map((item, i) => (
             <div
               key={i}
-              className={`glass-card rounded-xl p-6 border transition-all duration-300 cursor-pointer hover:scale-[1.03] ${colorMap[item.color]}`}
+              className={`glass-card rounded-2xl p-6 border transition-all duration-500 cursor-pointer hover:scale-[1.03] ${colorMap[item.color]}`}
               onClick={() => setExpanded(expanded === i ? null : i)}
             >
-              <div className="text-3xl mb-3">{item.icon}</div>
-              <h3 className="text-lg font-bold text-foreground mb-1">{item.title}</h3>
+              <div className="text-4xl mb-4">{item.icon}</div>
+              <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
               <p className="text-sm text-muted-foreground mb-3">{item.short}</p>
               
               {expanded === i && (
                 <div className="animate-fade-in">
-                  <div className="h-px bg-border my-3" />
+                  <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent my-3" />
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
                 </div>
               )}
               
-              <button className="text-xs text-primary mt-2 hover:underline">
+              <button className="text-xs text-primary mt-2 hover:underline font-medium">
                 {expanded === i ? "Mbyll ▲" : "Mëso më shumë ▼"}
               </button>
             </div>

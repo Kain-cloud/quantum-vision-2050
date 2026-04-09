@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import futureCityImg from "@/assets/future-city.jpg";
 
 const features = [
   {
@@ -27,39 +28,51 @@ export default function DailyLifeSection() {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section className="relative py-20 md:py-32 px-4" id="daily-life">
+    <section className="relative py-24 md:py-36 px-4" id="daily-life">
       <div ref={ref} className={`max-w-5xl mx-auto ${visible ? 'section-visible' : 'section-hidden'}`}>
-        <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-accent/10 border border-accent/20 text-accent mb-4">
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-accent/10 border border-accent/20 text-accent mb-4 tracking-wider uppercase">
             Seksioni 3
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
             Si do të ndryshojë jeta e përditshme?
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Në vitin 2050, çdo ditë do të jetë e mbushur me teknologji që sot duket si fantashkencë.
           </p>
         </div>
 
-        {/* Smart home illustration */}
-        <div className="relative glass-card rounded-2xl p-8 mb-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
-          
-          <div className="relative grid sm:grid-cols-2 gap-6">
-            {features.map((f, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-xl hover:bg-muted/20 transition-colors group">
-                <div className="text-3xl flex-shrink-0 group-hover:scale-110 transition-transform">{f.icon}</div>
-                <div>
-                  <h3 className="font-bold text-foreground mb-1">{f.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-                </div>
-              </div>
-            ))}
+        {/* City image */}
+        <div className="relative rounded-2xl overflow-hidden mb-10 group">
+          <img
+            src={futureCityImg}
+            alt="Qyteti i së ardhmes 2050"
+            className="w-full h-72 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+            width={1280}
+            height={720}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+          <div className="absolute bottom-6 left-6 right-6">
+            <p className="text-foreground font-semibold text-lg">Qyteti i së ardhmes — makina fluturuese, robotë dhe energji e pastër</p>
           </div>
         </div>
 
-        <div className="text-center glass-card rounded-xl p-6">
-          <p className="text-sm text-muted-foreground">
+        {/* Feature cards */}
+        <div className="grid sm:grid-cols-2 gap-6 mb-8">
+          {features.map((f, i) => (
+            <div key={i} className="glass-card rounded-2xl p-6 flex gap-4 hover:scale-[1.02] transition-all duration-300 group border border-border/30 hover:border-accent/30">
+              <div className="text-4xl flex-shrink-0 group-hover:scale-110 transition-transform">{f.icon}</div>
+              <div>
+                <h3 className="font-bold text-foreground text-lg mb-2">{f.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center glass-card rounded-2xl p-8 holographic-border">
+          <p className="text-muted-foreground leading-relaxed">
             🌟 Në vitin 2050, teknologjia nuk do të jetë lukse — do të jetë pjesë e natyrshme e jetës sonë të përditshme.
             E ardhmja po ndërtohet <strong className="text-accent">sot</strong>!
           </p>
