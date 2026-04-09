@@ -6,12 +6,14 @@ import SpaceSection from "@/components/sections/SpaceSection";
 import ConclusionSection from "@/components/sections/ConclusionSection";
 import NavDots from "@/components/NavDots";
 import ParticleField from "@/components/ParticleField";
+import AIChatWidget from "@/components/AIChatWidget";
 
 const Index = () => {
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
       <ParticleField count={20} />
       <NavDots />
+      <AIChatWidget />
       
       <div id="hero">
         <HeroSection />
