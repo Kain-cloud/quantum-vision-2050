@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import coreImg from "@/assets/quantum-computer-core.jpg";
 
 type Component = {
   id: string;
@@ -19,87 +18,90 @@ const components: Component[] = [
     label: "Kubiti",
     emoji: "⚛️",
     color: "primary",
-    position: { top: "8%", left: "44%" },
-    title: "Kubiti — Qeliza e informacionit",
+    position: { top: "38%", left: "48%" },
+    title: "Kubiti — Zemra e Kompjuterit",
     description:
-      "Kubiti është njësia bazë e kompjuterit kuantik. Ndryshe nga biti klasik (0 ose 1), kubiti mund të jetë 0, 1 ose të dyja njëkohësisht falë superpozicionit.",
-    funFact: "💡 1000 kubitë mund të bëjnë më shumë llogaritje sesa atomet që ka i gjithë universi i njohur!",
+      "Kubiti (qubit) është njësia bazë e informacionit kuantik — ekuivalenti i 'bitit' në kompjuterët normalë. Ndërsa një bit është ose 0 ose 1, kubiti falë superpozicionit mund të jetë 0, 1, ose të dyja njëkohësisht.",
+    funFact: "💡 Vetëm 300 kubite mund të ruajnë më shumë gjendje sesa ka atome në univers!",
   },
   {
-    id: "cooling",
-    label: "Ftohja",
+    id: "dilution",
+    label: "Ftohësi",
     emoji: "❄️",
     color: "secondary",
-    position: { top: "30%", left: "82%" },
-    title: "Sistemi kriogjenik",
+    position: { top: "10%", left: "22%" },
+    title: "Ftohësi Dilution — Temperatura Absolute",
     description:
-      "Kompjuteri kuantik duhet të ftohet në -273°C — më ftohtë se hapësira! Kjo i mban kubitët të qëndrueshëm nga zhurma termike.",
-    funFact: "🥶 Brenda kompjuterit kuantik është më ftohtë se kudo në univers.",
+      "Kubitet duhet të mbahen shumë pranë zeros absolute (−273.15 °C). Ftohësi dilution arrin −273.14 °C — më i ftohtë se hapësira e jashtme! Kjo parandalon 'dekoherencën' — shkatërrimin e informacionit kuantik nga nxehtësia.",
+    funFact: "🌡️ Temperatura brenda është 150 herë më e ftohtë se hapësira ndërgalaktike.",
   },
   {
-    id: "laser",
-    label: "Lazerët",
-    emoji: "🔦",
+    id: "control",
+    label: "Elektronika e Kontrollit",
+    emoji: "🎛️",
     color: "accent",
-    position: { top: "70%", left: "82%" },
-    title: "Lazerët kontrollues",
+    position: { top: "10%", left: "68%" },
+    title: "Elektronika e Kontrollit",
     description:
-      "Lazerët precizë manipulojnë kubitët, duke vendosur gjendjet e tyre kuantike dhe ndërvepruar mes tyre.",
-    funFact: "🎯 Lazerët veprojnë në mbi 1 milion herë në sekondë me precizitet të perfekt.",
+      "Sinjaletë e mikrovalëve kontrollojnë çdo kubit individualisht — si tastiera e kompjuterit tënd, por në frekuenca shumë të larta. Çdo 'portë kuantike' (operacion) kryhet duke dërguar impulse precize mikrovalësh.",
+    funFact: "📡 Frekuencat e kontrollit janë 5–7 GHz — e njëjta brez si Wi-Fi 5GHz!",
   },
   {
-    id: "entanglement",
-    label: "Ngatërrimi",
-    emoji: "🔗",
-    color: "primary",
-    position: { top: "92%", left: "44%" },
-    title: "Ngatërrimi kuantik",
-    description:
-      "Kubitët 'lidhen' dhe ndajnë informacionin menjëherë, çfarëdo distancë mes tyre. Kjo i jep kompjuterit kuantik fuqinë e tij.",
-    funFact: "✨ Einstein e quante 'veprim i frikshëm nga distanca'.",
-  },
-  {
-    id: "algorithm",
-    label: "Algoritmi",
-    emoji: "🧮",
+    id: "wiring",
+    label: "Kabllot Koaksiale",
+    emoji: "🔌",
     color: "secondary",
-    position: { top: "70%", left: "6%" },
-    title: "Algoritmet kuantike",
+    position: { top: "62%", left: "18%" },
+    title: "Kabllot Koaksiale — Sinjalet e Ftohtë",
     description:
-      "Programe të posaçme si algoritmi i Shor-it ose Grover-it shfrytëzojnë rregullat kuantike për të zgjidhur probleme të pamundura për kompjuterët klasikë.",
-    funFact: "⚡ Google zgjidhi në 200 sekonda një problem që do t'i merrte 10,000 vite një superkompjuteri klasik.",
+      "Kabllot speciale koaksiale transferojnë sinjale nga temperatura e dhomës drejt kubiteve të ftohtë. Ato janë të blinduara për të bllokuar zhurmën elektromagnetike që do të shkatërronte kubitet.",
+    funFact: "🧊 Kabllot filtrojnë nxehtësinë në çdo nivel — nga 300K deri në 10 millikelvin.",
   },
   {
     id: "readout",
     label: "Leximi",
     emoji: "📡",
-    color: "accent",
-    position: { top: "30%", left: "6%" },
-    title: "Leximi i rezultatit",
+    color: "primary",
+    position: { top: "62%", left: "73%" },
+    title: "Rezonatorët e Leximit",
     description:
-      "Sensorët e ndjeshëm matin gjendjen e kubitëve. Kur i vëzhgojmë, ata 'zgjedhin' një gjendje konkrete (0 ose 1) — kjo është përgjigjja jonë.",
-    funFact: "👁️ Kjo është efekti i vëzhguesit në veprim — matja ndryshon sistemin!",
+      "Pas llogaritjes, rezonatorët 'masin' kubitet për të lexuar rezultatin. Ky është momenti i vëzhgimit — kur kubitët dalin nga superpozicioni dhe japin një përgjigje klasike (0 ose 1).",
+    funFact: "👁️ Leximi shkatërron superpozicionin — ashtu si efekti i vëzhguesit!",
+  },
+  {
+    id: "shield",
+    label: "Mburoja Magnetike",
+    emoji: "🛡️",
+    color: "accent",
+    position: { top: "82%", left: "44%" },
+    title: "Mburoja Magnetike — Mbrojtja e Kubiteve",
+    description:
+      "Fushat magnetike të jashtme mund të shkatërrojnë kubitet. Shtresat e metalit superpërcjellës bllokojnë plotësisht çdo fushë magnetike të jashtme, duke krijuar një mjedis perfekt izolues.",
+    funFact: "🔮 Materiali përdorur, Mu-metali, zvogëlon fushat magnetike me 1000 herë.",
   },
 ];
 
-const colorClasses: Record<Component["color"], { ring: string; badge: string; title: string; glow: string }> = {
+const colorClasses = {
   primary: {
-    ring: "border-primary/60",
-    badge: "bg-primary/20 border-primary/40 text-primary",
+    ring: "border-primary/60 shadow-[0_0_20px_hsl(263,70%,50%,0.5)]",
+    dot: "bg-primary",
+    badge: "bg-primary/10 border-primary/30 text-primary",
     title: "text-primary",
-    glow: "shadow-[0_0_20px_hsl(263,70%,50%,0.5)]",
+    line: "border-primary/40",
   },
   secondary: {
-    ring: "border-secondary/60",
-    badge: "bg-secondary/20 border-secondary/40 text-secondary",
+    ring: "border-secondary/60 shadow-[0_0_20px_hsl(187,80%,55%,0.5)]",
+    dot: "bg-secondary",
+    badge: "bg-secondary/10 border-secondary/30 text-secondary",
     title: "text-secondary",
-    glow: "shadow-[0_0_20px_hsl(187,80%,55%,0.5)]",
+    line: "border-secondary/40",
   },
   accent: {
-    ring: "border-accent/60",
-    badge: "bg-accent/20 border-accent/40 text-accent",
+    ring: "border-accent/60 shadow-[0_0_20px_hsl(45,96%,56%,0.5)]",
+    dot: "bg-accent",
+    badge: "bg-accent/10 border-accent/30 text-accent",
     title: "text-accent",
-    glow: "shadow-[0_0_20px_hsl(45,96%,56%,0.5)]",
+    line: "border-accent/40",
   },
 };
 
@@ -109,126 +111,142 @@ export default function QuantumComputerSection() {
 
   return (
     <section className="relative py-24 md:py-36 px-4" id="quantum-computer">
-      <div ref={ref} className={`max-w-6xl mx-auto ${visible ? "section-visible" : "section-hidden"}`}>
+      <div
+        ref={ref}
+        className={`max-w-6xl mx-auto ${visible ? "section-visible" : "section-hidden"}`}
+      >
+        {/* Header */}
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 border border-primary/20 text-primary mb-4 tracking-wider uppercase">
-            Seksioni 2
+            Bonus
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
-            Kompjuteri kuantik
+            Kompjuteri Kuantik
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            Kliko mbi pjesët e diagramit për të zbuluar si funksionon makina më e fuqishme e shekullit 21.
+            Kliko mbi çdo komponent për të zbuluar se çfarë bën dhe pse është i rëndësishëm.
           </p>
         </div>
 
-        {/* Hero image */}
-        <div className="relative rounded-2xl overflow-hidden mb-12 group">
-          <img
-            src={coreImg}
-            alt="Bërthama e kompjuterit kuantik"
-            className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
-            loading="lazy"
-            width={1280}
-            height={896}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-          <div className="absolute bottom-4 left-6 right-6">
-            <p className="text-sm text-foreground/80 font-medium">
-              Bërthama kuantike — kandelabri i artë i kubitëve i ftohur në -273°C
-            </p>
-          </div>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+          {/* Diagram */}
+          <div className="relative w-full aspect-square max-w-md mx-auto select-none">
+            {/* Outer rings */}
+            <div className="absolute inset-[4%] rounded-full border border-primary/10 animate-spin" style={{ animationDuration: "30s" }} />
+            <div className="absolute inset-[12%] rounded-full border border-secondary/10 animate-spin" style={{ animationDuration: "20s", animationDirection: "reverse" }} />
+            <div className="absolute inset-[20%] rounded-full border border-accent/10 animate-spin" style={{ animationDuration: "15s" }} />
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Interactive diagram */}
-          <div className="relative aspect-square w-full max-w-xl mx-auto">
-            {/* Spinning rings */}
-            <div className="absolute inset-0 rounded-full border border-primary/20 animate-spin" style={{ animationDuration: "30s" }} />
-            <div className="absolute inset-8 rounded-full border border-secondary/20 animate-spin" style={{ animationDuration: "20s", animationDirection: "reverse" }} />
-            <div className="absolute inset-16 rounded-full border border-accent/20 animate-spin" style={{ animationDuration: "15s" }} />
-
-            {/* Center core */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center text-4xl md:text-5xl animate-pulse-glow shadow-[0_0_60px_hsl(263,70%,50%,0.5)]">
-              <span className="bg-background/40 rounded-full w-20 h-20 md:w-24 md:h-24 flex items-center justify-center backdrop-blur">
-                💎
-              </span>
-            </div>
+            {/* Core glow */}
+            <div
+              className="absolute inset-[38%] rounded-full"
+              style={{
+                background:
+                  "radial-gradient(circle, hsl(263 70% 50% / 0.35) 0%, hsl(187 80% 55% / 0.15) 60%, transparent 100%)",
+              }}
+            />
 
             {/* Component dots */}
-            {components.map((c) => {
-              const isActive = selected?.id === c.id;
+            {components.map((comp) => {
+              const colors = colorClasses[comp.color];
+              const isSelected = selected?.id === comp.id;
               return (
                 <button
-                  key={c.id}
-                  onClick={() => setSelected(isActive ? null : c)}
-                  className="absolute -translate-x-1/2 -translate-y-1/2 group/dot"
-                  style={{ top: c.position.top, left: c.position.left }}
-                  aria-label={c.label}
+                  key={comp.id}
+                  onClick={() => setSelected(isSelected ? null : comp)}
+                  className="absolute flex flex-col items-center gap-1 -translate-x-1/2 -translate-y-1/2 group z-10"
+                  style={{ top: comp.position.top, left: comp.position.left }}
+                  aria-label={comp.label}
                 >
                   <div
-                    className={`w-14 h-14 md:w-16 md:h-16 rounded-full glass-card flex items-center justify-center text-2xl md:text-3xl border-2 transition-all duration-300 ${
-                      isActive
-                        ? `${colorClasses[c.color].ring} ${colorClasses[c.color].glow} scale-110`
-                        : "border-border/40 hover:scale-110 hover:border-foreground/40"
+                    className={`w-12 h-12 rounded-full border-2 glass-card flex items-center justify-center text-xl transition-all duration-300 group-hover:scale-125 ${
+                      isSelected
+                        ? `scale-125 ${colors.ring}`
+                        : "border-border/40 hover:border-white/30"
                     }`}
                   >
-                    {c.emoji}
+                    {comp.emoji}
                   </div>
-                  <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[10px] md:text-xs text-foreground/80 whitespace-nowrap font-medium">
-                    {c.label}
+                  <span
+                    className={`text-[10px] font-semibold whitespace-nowrap px-2 py-0.5 rounded-full border transition-all duration-300 ${
+                      isSelected ? colors.badge : "bg-background/60 border-border/30 text-muted-foreground"
+                    }`}
+                  >
+                    {comp.label}
                   </span>
                 </button>
               );
             })}
+
+            {/* Center label */}
+            <div className="absolute inset-[38%] flex items-center justify-center pointer-events-none">
+              <span className="text-2xl">💻</span>
+            </div>
           </div>
 
-          {/* Info panel */}
-          <div className="glass-card rounded-2xl p-6 md:p-8 min-h-[320px] holographic-border">
+          {/* Info Panel */}
+          <div className="flex flex-col gap-4">
             {selected ? (
-              <div className="animate-fade-in">
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mb-4 ${colorClasses[selected.color].badge}`}>
-                  {selected.emoji} {selected.label}
-                </span>
-                <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${colorClasses[selected.color].title}`}>
-                  {selected.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-5">{selected.description}</p>
-                <div className="glass-card rounded-xl p-4 border border-border/40">
-                  <p className="text-sm text-foreground/90">{selected.funFact}</p>
+              <div
+                key={selected.id}
+                className={`glass-card rounded-2xl p-7 border transition-all duration-500 holographic-border ${colorClasses[selected.color].line} animate-fade-in`}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-4xl">{selected.emoji}</span>
+                  <h3 className={`text-xl font-extrabold ${colorClasses[selected.color].title}`}>
+                    {selected.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-5 text-sm">
+                  {selected.description}
+                </p>
+                <div className={`rounded-xl p-4 border text-sm font-medium ${colorClasses[selected.color].badge}`}>
+                  {selected.funFact}
                 </div>
                 <button
                   onClick={() => setSelected(null)}
-                  className="mt-5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  className="mt-5 text-xs text-muted-foreground hover:text-foreground transition-colors underline"
                 >
-                  ← Mbyll
+                  ✕ Mbyll
                 </button>
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center text-center h-full py-10">
-                <div className="text-5xl mb-4 animate-float">👆</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Eksploro pjesët</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-                  Kliko mbi çdo simbol rreth bërthamës për të mësuar si funksionon kompjuteri kuantik nga brenda.
+              <div className="glass-card rounded-2xl p-8 border border-border/30 flex flex-col items-center justify-center text-center gap-4 min-h-[280px]">
+                <div className="text-5xl animate-pulse">👆</div>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+                  Kliko mbi një komponent në diagramë për të mësuar se çfarë bën atë pjesë të veçantë të kompjuterit kuantik.
                 </p>
+                <div className="flex flex-wrap gap-2 justify-center mt-2">
+                  {components.map((c) => (
+                    <button
+                      key={c.id}
+                      onClick={() => setSelected(c)}
+                      className={`px-3 py-1 rounded-full text-xs border transition-all hover:scale-105 ${colorClasses[c.color].badge}`}
+                    >
+                      {c.emoji} {c.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
-          </div>
-        </div>
 
-        {/* Stats strip */}
-        <div className="grid sm:grid-cols-3 gap-4 mt-12">
-          <div className="glass-card rounded-2xl p-6 text-center border border-secondary/20">
-            <div className="text-3xl md:text-4xl font-extrabold gradient-text mb-1">−273°C</div>
-            <div className="text-xs text-muted-foreground uppercase tracking-wider">Temperatura e punës</div>
-          </div>
-          <div className="glass-card rounded-2xl p-6 text-center border border-primary/20">
-            <div className="text-3xl md:text-4xl font-extrabold gradient-text mb-1">1000×</div>
-            <div className="text-xs text-muted-foreground uppercase tracking-wider">Më i shpejtë se klasikët</div>
-          </div>
-          <div className="glass-card rounded-2xl p-6 text-center border border-accent/20">
-            <div className="text-3xl md:text-4xl font-extrabold gradient-text mb-1">300+</div>
-            <div className="text-xs text-muted-foreground uppercase tracking-wider">Kubitë në 2050</div>
+            {/* Stats strip */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { value: "−273°C", label: "Temperatura", color: "secondary" },
+                { value: "1000×", label: "Shpejtësia", color: "primary" },
+                { value: "300+", label: "Kubite sot", color: "accent" },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className={`glass-card rounded-xl p-3 text-center border ${colorClasses[stat.color as "primary" | "secondary" | "accent"].line}`}
+                >
+                  <p className={`text-lg font-extrabold ${colorClasses[stat.color as "primary" | "secondary" | "accent"].title}`}>
+                    {stat.value}
+                  </p>
+                  <p className="text-[10px] text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
