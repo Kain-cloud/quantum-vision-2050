@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const sections = [
   { id: "hero", label: "Hyrje" },
   { id: "quantum", label: "Fizika kuantike" },
-  { id: "quantum-computer", label: "Kompjuteri kuantik" },
+  { id: "quantum-computer", label: "Kompjuteri Kuantik" },
   { id: "innovations", label: "Inovacione" },
   { id: "daily-life", label: "Jeta" },
   { id: "space", label: "Hapësira" },
