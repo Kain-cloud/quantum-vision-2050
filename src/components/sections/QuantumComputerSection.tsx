@@ -176,11 +176,6 @@ export default function QuantumComputerSection() {
                 </button>
               );
             })}
-
-            {/* Center label */}
-            <div className="absolute inset-[38%] flex items-center justify-center pointer-events-none">
-              <span className="text-2xl">💻</span>
-            </div>
           </div>
 
           {/* Info Panel */}
