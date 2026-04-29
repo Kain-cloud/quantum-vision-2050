@@ -7,6 +7,10 @@ const facts = [
   "Ka më shumë yje në univers sesa kokrra rëre në Tokë",
   "Një ditë në Venusi është më e gjatë se një vit i tij",
   "Disa yje që shohim mund të mos ekzistojnë më",
+  "Mars ka dy hëna të vogla: Phobos dhe Deimos",
+  "Zëri nuk udhëton në hapësirë — ajo është krejtësisht e heshtur",
+  "Temperatura në Mars varion nga -125°C deri në +20°C",
+  "Në 2050 udhëtimi për në Mars zgjat vetëm 3 muaj",
 ];
 
 export default function SpaceSection() {
@@ -19,7 +23,7 @@ export default function SpaceSection() {
       <div ref={ref} className={`relative z-10 max-w-5xl mx-auto ${visible ? 'section-visible' : 'section-hidden'}`}>
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary mb-4 tracking-wider uppercase">
-            Seksioni 4
+            Seksioni 5
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
             Hapësira

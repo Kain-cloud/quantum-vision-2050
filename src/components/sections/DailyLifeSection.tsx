@@ -22,6 +22,21 @@ const features = [
     title: "Lidhje me Marsin",
     desc: "Familjet komunikojnë me miqtë në Mars përmes video-thirrjeve hapësinore. Distanca nuk është më pengesë!",
   },
+  {
+    icon: "🥗",
+    title: "Ushqim i ardhshëm",
+    desc: "Ushqimi rritet në fabrika vertikale të ndriçuara me lazerë kuantikë, ose printohet 3D nga proteina të pastra.",
+  },
+  {
+    icon: "👕",
+    title: "Veshje inteligjente",
+    desc: "Rrobat matin shëndetin tënd, ndryshojnë ngjyrë me humorin dhe rregullojnë temperaturën e trupit automatikisht.",
+  },
+  {
+    icon: "🎮",
+    title: "Argëtim holografik",
+    desc: "Filmat dhe lojërat shfaqen si hologramë 3D në dhomë. Karakteret kontrollohen me mendim — ti je brenda skenës!",
+  },
 ];
 
 export default function DailyLifeSection() {
@@ -32,7 +47,7 @@ export default function DailyLifeSection() {
       <div ref={ref} className={`max-w-5xl mx-auto ${visible ? 'section-visible' : 'section-hidden'}`}>
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-accent/10 border border-accent/20 text-accent mb-4 tracking-wider uppercase">
-            Seksioni 3
+            Seksioni 4
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
             Si do të ndryshojë jeta e përditshme?
