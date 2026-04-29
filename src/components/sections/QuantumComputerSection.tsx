@@ -18,7 +18,7 @@ const components: Component[] = [
     label: "Kubiti",
     emoji: "⚛️",
     color: "primary",
-    position: { top: "38%", left: "48%" },
+    position: { top: "18%", left: "45%" },
     title: "Kubiti — Zemra e Kompjuterit",
     description:
       "Kubiti (qubit) është njësia bazë e informacionit kuantik — ekuivalenti i 'bitit' në kompjuterët normalë. Ndërsa një bit është ose 0 ose 1, kubiti falë superpozicionit mund të jetë 0, 1, ose të dyja njëkohësisht.",
