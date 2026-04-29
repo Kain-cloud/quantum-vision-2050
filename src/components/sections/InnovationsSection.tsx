@@ -46,6 +46,27 @@ const innovations = [
     detail: "Mjekësia kuantike mundëson zbulimin e sëmundjeve shumë herët, trajtime të personalizuara me saktësi të lartë, dhe njerëzit jetojnë më gjatë e më shëndetshëm. Ilaçet krijohen nga kompjuterët kuantikë.",
     color: "accent",
   },
+  {
+    icon: "🌐",
+    title: "Interneti kuantik",
+    short: "Lidhje që nuk mund të hakohet",
+    detail: "Informacioni dërgohet si fotone të ngatërruara. Asnjë haker nuk mund ta përgjojë — nëse e prek, shkatërrohet automatikisht. Në 2050, çdo kompjuter është i lidhur me internetin kuantik.",
+    color: "primary",
+  },
+  {
+    icon: "🔋",
+    title: "Bateritë kuantike",
+    short: "Ngarkim në sekonda, jo në orë",
+    detail: "Bateritë kuantike ngarkohen mijëra herë më shpejt se ato të sotmet. Një makinë elektrike ngarkohet plotësisht në vetëm 30 sekonda dhe zgjat shumë më gjatë.",
+    color: "secondary",
+  },
+  {
+    icon: "📡",
+    title: "Sensorët kuantikë",
+    short: "Saktësi ekstreme në çdo matje",
+    detail: "Sensorët kuantikë zbulojnë sëmundje në fazat më të hershme, minerale të fshehura nën tokë, dhe ndryshime klimatike me një saktësi që sot është e pamundur.",
+    color: "accent",
+  },
 ];
 
 const colorMap: Record<string, string> = {
@@ -63,7 +84,7 @@ export default function InnovationsSection() {
       <div ref={ref} className={`max-w-6xl mx-auto ${visible ? 'section-visible' : 'section-hidden'}`}>
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary mb-4 tracking-wider uppercase">
-            Seksioni 2
+            Seksioni 3
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
             Inovacionet kryesore në vitin 2050
