@@ -34,10 +34,32 @@ function TunnelingDemo() {
         <h3 className="text-lg font-bold text-foreground">Tunelimi kuantik</h3>
       </div>
       <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
-        <div className="flex items-center gap-1">
-          <div className="w-4 h-4 rounded-full bg-secondary shadow-[0_0_10px_hsl(187,80%,55%)] animate-tunnel" />
-          <div className="w-5 h-24 bg-muted/40 rounded-lg mx-4 border border-muted-foreground/20" />
-        </div>
+        <style>{`
+          @keyframes tunnel-approach {
+            0%   { transform: translateX(-72px); opacity: 1; }
+            38%  { transform: translateX(-18px); opacity: 1; }
+            45%  { transform: translateX(-14px); opacity: 0; }
+            100% { transform: translateX(-14px); opacity: 0; }
+          }
+          @keyframes tunnel-exit {
+            0%   { transform: translateX(14px);  opacity: 0; }
+            52%  { transform: translateX(14px);  opacity: 0; }
+            58%  { transform: translateX(18px);  opacity: 1; }
+            100% { transform: translateX(72px);  opacity: 1; }
+          }
+          .tunnel-approach {
+            animation: tunnel-approach 2.4s ease-in-out infinite;
+          }
+          .tunnel-exit {
+            animation: tunnel-exit 2.4s ease-in-out infinite;
+          }
+        `}</style>
+        {/* Wall */}
+        <div className="absolute w-5 h-20 bg-muted/50 rounded border border-muted-foreground/30" />
+        {/* Particle approaching from left */}
+        <div className="tunnel-approach absolute w-4 h-4 rounded-full bg-secondary shadow-[0_0_12px_hsl(187,80%,55%)]" />
+        {/* Particle exiting on right */}
+        <div className="tunnel-exit absolute w-4 h-4 rounded-full bg-secondary shadow-[0_0_12px_hsl(187,80%,55%)]" />
       </div>
       <p className="text-sm text-muted-foreground leading-relaxed">
         Grimcat mund të <strong className="text-accent">kalojnë nëpër mure</strong> — sikur të zhduken nga njëra anë dhe shfaqen në tjetrën! Kjo quhet tunelim kuantik.
@@ -76,74 +98,6 @@ function ObserverDemo() {
       </button>
       <p className="text-sm text-muted-foreground leading-relaxed">
         Kur <strong className="text-primary">vëzhgojmë</strong> një grimcë, ajo ndryshon sjelljen! Kliko butonin për ta parë vetë.
-      </p>
-    </div>
-  );
-}
-
-function EntanglementDemo() {
-  return (
-    <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-2xl neon-glow-sm">🔗</div>
-        <h3 className="text-lg font-bold text-foreground">Ngatërrimi kuantik</h3>
-      </div>
-      <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
-        <div className="flex items-center gap-8">
-          <div className="w-6 h-6 rounded-full bg-primary shadow-[0_0_15px_hsl(263,70%,50%)] animate-pulse" />
-          <div className="flex-1 h-px bg-gradient-to-r from-primary via-secondary to-accent w-16 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-foreground/60 to-transparent animate-pulse" />
-          </div>
-          <div className="w-6 h-6 rounded-full bg-accent shadow-[0_0_15px_hsl(45,96%,56%)] animate-pulse" />
-        </div>
-      </div>
-      <p className="text-sm text-muted-foreground leading-relaxed">
-        Dy grimca <strong className="text-primary">lidhen për gjithmonë</strong> — çdo ndryshim te njëra ndikon menjëherë te tjetra, çfarëdo distancë! Einstein e quajti "veprim i frikshëm nga distanca".
-      </p>
-    </div>
-  );
-}
-
-function QubitDemo() {
-  return (
-    <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-2xl neon-glow-sm">💠</div>
-        <h3 className="text-lg font-bold text-foreground">Kubiti</h3>
-      </div>
-      <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
-        <div className="flex items-center gap-4 text-2xl font-bold">
-          <span className="text-muted-foreground">0</span>
-          <div className="relative w-16 h-16">
-            <div className="absolute inset-0 rounded-full border-2 border-secondary/40 animate-spin" style={{ animationDuration: "4s" }} />
-            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary to-secondary animate-pulse" />
-            <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-foreground">0+1</div>
-          </div>
-          <span className="text-muted-foreground">1</span>
-        </div>
-      </div>
-      <p className="text-sm text-muted-foreground leading-relaxed">
-        Biti klasik është 0 <em>ose</em> 1. <strong className="text-secondary">Kubiti</strong> mund të jetë 0, 1, <strong>ose të dyja njëkohësisht</strong>! Kjo i bën kompjuterët kuantikë super të fuqishëm.
-      </p>
-    </div>
-  );
-}
-
-function DualityDemo() {
-  return (
-    <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-2xl neon-glow-sm">🌊</div>
-        <h3 className="text-lg font-bold text-foreground">Vala-Grimcë</h3>
-      </div>
-      <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
-        <svg viewBox="0 0 120 60" className="w-32 h-16 text-accent">
-          <path d="M0,30 Q15,5 30,30 T60,30 T90,30 T120,30" fill="none" stroke="currentColor" strokeWidth="2" className="animate-pulse" />
-          <circle cx="60" cy="30" r="4" fill="currentColor" className="animate-pulse" />
-        </svg>
-      </div>
-      <p className="text-sm text-muted-foreground leading-relaxed">
-        Elektroni sillet si <strong className="text-accent">valë</strong> dhe si <strong className="text-secondary">grimcë</strong> njëkohësisht! Eksperimenti i dy çarjeve e provon këtë mister.
       </p>
     </div>
   );
@@ -188,9 +142,6 @@ export default function QuantumSection() {
           <SuperpositionDemo />
           <TunnelingDemo />
           <ObserverDemo />
-          <EntanglementDemo />
-          <QubitDemo />
-          <DualityDemo />
         </div>
 
         <div className="mt-12 glass-card rounded-2xl p-8 max-w-3xl mx-auto text-center holographic-border">
