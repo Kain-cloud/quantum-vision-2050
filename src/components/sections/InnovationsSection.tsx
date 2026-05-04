@@ -86,7 +86,7 @@ export default function InnovationsSection() {
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary mb-4 tracking-wider uppercase">
             Seksioni 3
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">
             Inovacionet kryesore në vitin 2050
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">

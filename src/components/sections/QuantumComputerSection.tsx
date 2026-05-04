@@ -120,7 +120,7 @@ export default function QuantumComputerSection() {
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 border border-primary/20 text-primary mb-4 tracking-wider uppercase">
             Bonus
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">
             Kompjuteri Kuantik
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">

@@ -25,7 +25,7 @@ export default function SpaceSection() {
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-secondary/10 border border-secondary/20 text-secondary mb-4 tracking-wider uppercase">
             Seksioni 5
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">
             Hapësira
           </h2>
         </div>
