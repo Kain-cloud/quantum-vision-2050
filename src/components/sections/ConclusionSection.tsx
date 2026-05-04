@@ -8,7 +8,7 @@ export default function ConclusionSection() {
     <section className="relative py-24 md:py-36 px-4" id="conclusion">
       <div ref={ref} className={`max-w-4xl mx-auto text-center ${visible ? 'section-visible' : 'section-hidden'}`}>
         <div className="mb-10">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary via-secondary to-accent mx-auto mb-8 flex items-center justify-center text-3xl animate-pulse-glow shadow-[0_0_40px_hsl(263,70%,50%,0.4)]">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary via-secondary to-accent mx-auto mb-8 flex items-center justify-center text-3xl shadow-[0_0_40px_hsl(263,70%,50%,0.4)]">
             🌍
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">
