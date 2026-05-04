@@ -7,7 +7,7 @@ function SuperpositionDemo() {
     <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 animate-pulse-glow group">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-2xl neon-glow-sm">⚛️</div>
-        <h3 className="text-lg font-bold text-foreground">Superpozicioni</h3>
+        <h3 className="text-lg font-black text-foreground">Superpozicioni</h3>
       </div>
       <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
         <div className="relative w-24 h-24">
@@ -31,7 +31,7 @@ function TunnelingDemo() {
     <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-2xl neon-glow-sm">🌀</div>
-        <h3 className="text-lg font-bold text-foreground">Tunelimi kuantik</h3>
+        <h3 className="text-lg font-black text-foreground">Tunelimi kuantik</h3>
       </div>
       <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
         <style>{`
@@ -75,7 +75,7 @@ function ObserverDemo() {
     <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-2xl neon-glow-sm">👁️</div>
-        <h3 className="text-lg font-bold text-foreground">Efekti i vëzhguesit</h3>
+        <h3 className="text-lg font-black text-foreground">Efekti i vëzhguesit</h3>
       </div>
       <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
         <div className="relative">

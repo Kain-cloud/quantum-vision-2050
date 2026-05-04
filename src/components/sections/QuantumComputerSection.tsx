@@ -192,7 +192,7 @@ export default function QuantumComputerSection() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-4xl">{selected.emoji}</span>
-                  <h3 className={`text-xl font-extrabold ${colorClasses[selected.color].title}`}>
+                  <h3 className={`text-xl font-black ${colorClasses[selected.color].title}`}>
                     {selected.title}
                   </h3>
                 </div>
@@ -240,7 +240,7 @@ export default function QuantumComputerSection() {
                   key={stat.label}
                   className={`glass-card rounded-xl p-3 text-center border ${colorClasses[stat.color as "primary" | "secondary" | "accent"].line}`}
                 >
-                  <p className={`text-lg font-extrabold ${colorClasses[stat.color as "primary" | "secondary" | "accent"].title}`}>
+                  <p className={`text-lg font-black ${colorClasses[stat.color as "primary" | "secondary" | "accent"].title}`}>
                     {stat.value}
                   </p>
                   <p className="text-[10px] text-muted-foreground">{stat.label}</p>

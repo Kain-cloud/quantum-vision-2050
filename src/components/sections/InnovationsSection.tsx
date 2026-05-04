@@ -120,7 +120,7 @@ export default function InnovationsSection() {
               onClick={() => setExpanded(expanded === i ? null : i)}
             >
               <div className="text-4xl mb-4">{item.icon}</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+              <h3 className="text-lg font-black text-foreground mb-2">{item.title}</h3>
               <p className="text-sm text-muted-foreground mb-3">{item.short}</p>
               
               {expanded === i && (

@@ -82,7 +82,7 @@ export default function SpaceSection() {
           <div className="glass-card rounded-2xl p-8 border border-accent/20 holographic-border">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl">🔴</span>
-              <h3 className="text-xl font-bold text-foreground">Baza njerëzore në Mars</h3>
+              <h3 className="text-xl font-black text-foreground">Baza njerëzore në Mars</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Në vitin 2050, njerëzit kanë ndërtuar baza në Mars me ajër dhe ujë artificiale. Udhëtimi hapësinor po bëhet gjë e zakonshme, dhe shkencëtarët po kërkojnë jetë jashtëtokësore.

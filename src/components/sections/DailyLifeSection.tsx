@@ -79,7 +79,7 @@ export default function DailyLifeSection() {
             <div key={i} className="glass-card rounded-2xl p-6 flex gap-4 hover:scale-[1.02] transition-all duration-300 group border border-border/30 hover:border-accent/30">
               <div className="text-4xl flex-shrink-0 group-hover:scale-110 transition-transform">{f.icon}</div>
               <div>
-                <h3 className="font-bold text-foreground text-lg mb-2">{f.title}</h3>
+                <h3 className="font-black text-foreground text-lg mb-2">{f.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
               </div>
             </div>
