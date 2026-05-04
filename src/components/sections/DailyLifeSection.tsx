@@ -49,7 +49,7 @@ export default function DailyLifeSection() {
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-accent/10 border border-accent/20 text-accent mb-4 tracking-wider uppercase">
             Seksioni 4
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">
             Si do të ndryshojë jeta e përditshme?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -79,7 +79,7 @@ export default function DailyLifeSection() {
             <div key={i} className="glass-card rounded-2xl p-6 flex gap-4 hover:scale-[1.02] transition-all duration-300 group border border-border/30 hover:border-accent/30">
               <div className="text-4xl flex-shrink-0 group-hover:scale-110 transition-transform">{f.icon}</div>
               <div>
-                <h3 className="font-bold text-foreground text-lg mb-2">{f.title}</h3>
+                <h3 className="font-black text-foreground text-lg mb-2">{f.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
               </div>
             </div>

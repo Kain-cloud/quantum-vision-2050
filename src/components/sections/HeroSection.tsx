@@ -50,7 +50,7 @@ export default function HeroSection() {
             🚀 Një udhëtim në të ardhmen
           </span>
         </div>
-        <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold mb-6 gradient-text leading-tight tracking-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-6 gradient-text leading-tight tracking-tight">
           Mirë se vini në vitin 2050
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-2xl mx-auto mb-4 font-light">

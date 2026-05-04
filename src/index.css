@@ -105,9 +105,14 @@
 }
 
 .glass-card {
-  background: hsl(230 50% 12% / 0.6);
-  backdrop-filter: blur(16px);
-  border: 1px solid hsl(263 40% 30% / 0.5);
+  background: hsl(230 50% 12% / 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid hsl(263 40% 30% / 0.85);
+}
+
+h1.gradient-text,
+h2.gradient-text {
+  letter-spacing: -0.02em;
 }
 
 .holographic-border {
