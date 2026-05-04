@@ -4,7 +4,7 @@ import quantumImg from "@/assets/quantum-particles.jpg";
 
 function SuperpositionDemo() {
   return (
-    <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 animate-pulse-glow group">
+    <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-2xl neon-glow-sm">⚛️</div>
         <h3 className="text-lg font-black text-foreground">Superpozicioni</h3>
