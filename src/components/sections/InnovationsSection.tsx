@@ -28,8 +28,8 @@ const innovations = [
   {
     icon: "🔋",
     title: "Bateritë kuantike",
-    short: "Ngarkim në sekonda, jo në orë",
-    detail: "Bateritë kuantike ngarkohen mijëra herë më shpejt se ato të sotmet. Një makinë elektrike ngarkohet plotësisht në vetëm 30 sekonda dhe zgjat shumë më gjatë.",
+    short: "Karikim në sekonda, jo në orë",
+    detail: "Bateritë kuantike karikohen mijëra herë më shpejt se ato në ditët e sotme. Një makinë elektrike ngarkohet plotësisht në vetëm 30 sekonda dhe zgjat shumë më gjatë.",
     color: "secondary",
   },
   {
