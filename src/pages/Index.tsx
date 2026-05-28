@@ -2,8 +2,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import QuantumSection from "@/components/sections/QuantumSection";
 import QuantumComputerSection from "@/components/sections/QuantumComputerSection";
 import InnovationsSection from "@/components/sections/InnovationsSection";
-import DailyLifeSection from "@/components/sections/DailyLifeSection";
-import SpaceSection from "@/components/sections/SpaceSection";
 import ConclusionSection from "@/components/sections/ConclusionSection";
 import NavDots from "@/components/NavDots";
 import ParticleField from "@/components/ParticleField";
@@ -22,8 +20,6 @@ const Index = () => {
       <QuantumSection />
       <QuantumComputerSection />
       <InnovationsSection />
-      <DailyLifeSection />
-      <SpaceSection />
       <ConclusionSection />
 
       <footer className="py-8 text-center text-xs text-muted-foreground border-t border-border/30">

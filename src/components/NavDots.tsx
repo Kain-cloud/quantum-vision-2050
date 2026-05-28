@@ -5,8 +5,6 @@ const sections = [
   { id: "quantum", label: "Fizika kuantike" },
   { id: "quantum-computer", label: "Kompjuteri Kuantik" },
   { id: "innovations", label: "Inovacione" },
-  { id: "daily-life", label: "Jeta" },
-  { id: "space", label: "Hapësira" },
   { id: "conclusion", label: "Përfundim" },
 ];
 
