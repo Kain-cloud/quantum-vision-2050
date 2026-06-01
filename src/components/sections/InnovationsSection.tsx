@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import quantumComputerImg from "@/assets/quantum-computer.jpg";
 import futureHospitalImg from "@/assets/future-hospital.jpg";
+import AudioButton from "@/components/AudioButton";
 
 const innovations = [
   {
@@ -10,6 +11,7 @@ const innovations = [
     short: "Zgjidhin probleme komplekse në sekonda",
     detail: "Kompjuterët kuantikë përdorin kubitin në vend të bitit. Ata mund të zgjidhin probleme që kompjuterët e sotëm do t'u duheshin miliona vite! Në 2050, ata ndihmojnë në krijimin e ilaçeve të reja dhe avancimin e inteligjencës artificiale.",
     color: "primary",
+    audio: "/audio/kompjuterat-kuantik.mp3",
   },
   {
     icon: "🔐",
@@ -17,6 +19,7 @@ const innovations = [
     short: "Mesazhe që nuk mund të përgjohën",
     detail: "Kriptografia kuantike bën të mundur dërgimin e mesazheve që nuk mund të lexohen nga askush tjetër. Nëse dikush përpiqet t'i përgjojë, sistemi e zbulon menjëherë! Bankat dhe të dhënat personale janë maksimalisht të mbrojtura.",
     color: "secondary",
+    audio: "/audio/siguria-kuantike.mp3",
   },
   {
     icon: "🌐",
@@ -24,6 +27,7 @@ const innovations = [
     short: "Lidhje që nuk mund të hakohet",
     detail: "Informacioni dërgohet si fotone të ngatërruara. Asnjë haker nuk mund ta përgjojë — nëse e prek, shkatërrohet automatikisht. Në 2050, çdo kompjuter është i lidhur me internetin kuantik.",
     color: "primary",
+    audio: "/audio/interneti-kuantik.mp3",
   },
   {
     icon: "🔋",
@@ -31,6 +35,7 @@ const innovations = [
     short: "Karikim në sekonda, jo në orë",
     detail: "Bateritë kuantike karikohen mijëra herë më shpejt se ato në ditët e sotme. Një makinë elektrike ngarkohet plotësisht në vetëm 30 sekonda dhe zgjat shumë më gjatë.",
     color: "secondary",
+    audio: "/audio/bateri-kuantike.mp3",
   },
   {
     icon: "📡",
@@ -38,6 +43,7 @@ const innovations = [
     short: "Saktësi ekstreme në çdo matje",
     detail: "Sensorët kuantikë zbulojnë sëmundje në fazat më të hershme, minerale të fshehura nën tokë, dhe ndryshime klimatike me një saktësi që sot është e pamundur.",
     color: "accent",
+    audio: "/audio/sensoret-kuantik.mp3",
   },
 ];
 
@@ -91,7 +97,10 @@ export default function InnovationsSection() {
               className={`glass-card rounded-2xl p-6 border transition-all duration-500 cursor-pointer hover:scale-[1.03] ${colorMap[item.color]}`}
               onClick={() => setExpanded(expanded === i ? null : i)}
             >
-              <div className="text-4xl mb-4">{item.icon}</div>
+              <div className="flex items-start justify-between gap-2 mb-4">
+                <div className="text-4xl">{item.icon}</div>
+                <AudioButton src={item.audio} label={item.title} />
+              </div>
               <h3 className="text-lg font-black text-foreground mb-2">{item.title}</h3>
               <p className="text-sm text-muted-foreground mb-3">{item.short}</p>
               
