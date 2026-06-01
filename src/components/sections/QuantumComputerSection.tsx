@@ -1,5 +1,15 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import AudioButton from "@/components/AudioButton";
+
+const audioMap: Record<string, string> = {
+  qubit: "/audio/kubiti.mp3",
+  dilution: "/audio/ftohesi-dilution.mp3",
+  control: "/audio/elektronika-e-kontrollit.mp3",
+  wiring: "/audio/kabllot-koaksiale.mp3",
+  readout: "/audio/rezonatoret-e-leximit.mp3",
+  shield: "/audio/mburoja-magnetike.mp3",
+};
 
 type Component = {
   id: string;
@@ -192,9 +202,12 @@ export default function QuantumComputerSection() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-4xl">{selected.emoji}</span>
-                  <h3 className={`text-xl font-black ${colorClasses[selected.color].title}`}>
+                  <h3 className={`text-xl font-black flex-1 ${colorClasses[selected.color].title}`}>
                     {selected.title}
                   </h3>
+                  {audioMap[selected.id] && (
+                    <AudioButton src={audioMap[selected.id]} label={selected.label} />
+                  )}
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-5 text-sm">
                   {selected.description}

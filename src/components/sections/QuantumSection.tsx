@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import quantumImg from "@/assets/quantum-particles.jpg";
+import AudioButton from "@/components/AudioButton";
 
 function SuperpositionDemo() {
   return (
     <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-2xl neon-glow-sm">⚛️</div>
-        <h3 className="text-lg font-black text-foreground">Superpozicioni</h3>
+        <h3 className="text-lg font-black text-foreground flex-1">Superpozicioni</h3>
+        <AudioButton src="/audio/superpozicioni.mp3" label="Superpozicioni" />
       </div>
       <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
         <div className="relative w-24 h-24">
@@ -31,7 +33,8 @@ function TunnelingDemo() {
     <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-2xl neon-glow-sm">🌀</div>
-        <h3 className="text-lg font-black text-foreground">Tunelimi kuantik</h3>
+        <h3 className="text-lg font-black text-foreground flex-1">Tunelimi kuantik</h3>
+        <AudioButton src="/audio/tuneli-kuantik.mp3" label="Tunelimi kuantik" />
       </div>
       <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
         <style>{`
@@ -75,7 +78,8 @@ function ObserverDemo() {
     <div className="glass-card rounded-2xl p-6 hover:scale-[1.03] transition-all duration-500 group">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-2xl neon-glow-sm">👁️</div>
-        <h3 className="text-lg font-black text-foreground">Efekti i vëzhguesit</h3>
+        <h3 className="text-lg font-black text-foreground flex-1">Efekti i vëzhguesit</h3>
+        <AudioButton src="/audio/efekti-vezhguesit.mp3" label="Efekti i vëzhguesit" />
       </div>
       <div className="relative h-36 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-background/30">
         <div className="relative">
@@ -144,7 +148,10 @@ export default function QuantumSection() {
           <ObserverDemo />
         </div>
 
-        <div className="mt-12 glass-card rounded-2xl p-8 max-w-3xl mx-auto text-center holographic-border">
+        <div className="mt-12 glass-card rounded-2xl p-8 max-w-3xl mx-auto text-center holographic-border relative">
+          <div className="absolute top-4 right-4">
+            <AudioButton src="/audio/a-e-dije.mp3" label="A e dije?" />
+          </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             💡 <strong className="text-foreground">A e dije?</strong> Fizika kuantike u zbulua në fillim të shekullit 20 nga shkencëtarë si 
             <strong className="text-secondary"> Max Planck</strong>, <strong className="text-primary">Niels Bohr</strong> dhe 
