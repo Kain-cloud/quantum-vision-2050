@@ -1,5 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import heroImage from "@/assets/hero-earth-2050.jpg";
+import AudioButton from "@/components/AudioButton";
 
 export default function ConclusionSection() {
   const { ref, visible } = useScrollReveal();
@@ -14,6 +15,9 @@ export default function ConclusionSection() {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">
             E ardhmja po ndërtohet sot
           </h2>
+          <div className="flex justify-center">
+            <AudioButton src="/audio/e-ardhmja-po-ndertohet-sot.mp3" label="E ardhmja po ndërtohet sot" />
+          </div>
         </div>
 
         {/* Earth image */}
